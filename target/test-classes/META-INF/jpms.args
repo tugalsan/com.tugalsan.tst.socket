@@ -1,0 +1,6 @@
+--add-modules
+jdk.incubator.vector
+--patch-module
+com.tugalsan.tst.socket=_
+--add-reads
+com.tugalsan.tst.socket=ALL-UNNAMED
