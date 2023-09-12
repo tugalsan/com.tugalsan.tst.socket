@@ -25,13 +25,13 @@ public class Main {
         var server = TS_SocketServer.of(killTrigger, port, forEachReceivedLine -> {
             return forEachReceivedLine.toUpperCase();
         }).start();
-        var clinet = TS_SocketClient.of(killTrigger, port, forEachReceivedLine -> {
+        var client = TS_SocketClient.of(killTrigger, port, forEachReceivedLine -> {
             d.cr("client", "server sent", forEachReceivedLine);
         }).start();
 
         IntStream.range(0, 10).forEachOrdered(i -> {
             TS_ThreadWait.milliseconds100();
-            d.cr("client", "addToQueue", "ĞÜğüŞİşiÖçöçIıı " + i);
+            client.addToQueue("ĞÜğüŞİşiÖçöçIıı " + i);
         });
         TS_ThreadWait.seconds(null, killTrigger, 15);
     }
