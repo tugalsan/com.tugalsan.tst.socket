@@ -1,11 +1,8 @@
 package com.tugalsan.tst.socket;
 
-import com.tugalsan.api.log.server.TS_Log;
-import com.tugalsan.api.socket.server.TS_SocketClient;
-import com.tugalsan.api.socket.server.TS_SocketServer;
-import com.tugalsan.api.socket.server.TS_SocketUtils;
-import com.tugalsan.api.thread.server.TS_ThreadWait;
-import com.tugalsan.api.thread.server.sync.TS_ThreadSyncTrigger;
+import com.tugalsan.api.log.server.*;
+import com.tugalsan.api.socket.server.*;
+import com.tugalsan.api.thread.server.sync.*;
 import java.util.stream.IntStream;
 
 public class Main {
