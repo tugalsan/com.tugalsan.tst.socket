@@ -31,7 +31,7 @@ public class Main {
 
         IntStream.range(0, 10).forEachOrdered(i -> {
             TS_ThreadWait.milliseconds100();
-            client.addToQueue("ĞÜğüŞİşiÖçöçIıı " + i);
+            client.add("ĞÜğüŞİşiÖçöçIıı " + i);
         });
         TS_ThreadWait.seconds(null, killTrigger, 15);
     }
