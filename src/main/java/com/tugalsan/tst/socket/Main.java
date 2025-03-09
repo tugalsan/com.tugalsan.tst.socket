@@ -14,7 +14,7 @@ public class Main {
     //java --enable-preview --add-modules jdk.incubator.vector -jar target/com.tugalsan.tst.socket-1.0-SNAPSHOT-jar-with-dependencies.jar
     //java -jar target/com.tugalsan.tst.socket-1.0-SNAPSHOT-jar-with-dependencies.jar
     public static void main(String... s) {
-        var killTrigger = TS_ThreadSyncTrigger.of();
+        var killTrigger = TS_ThreadSyncTrigger.of("main");
         var port = 8282;
         if (!TS_SocketUtils.available(8282)) {
             d.ce("main", "ERROR: Port in use already!", port);
